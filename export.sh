@@ -1,6 +1,5 @@
 #!/bin/bash
-
-cd /opt/etherpad/export_static/
+cd "$(dirname "$0")"
 
 ROOT_PAD="home"
 EXPORT_PATH="./static/"
