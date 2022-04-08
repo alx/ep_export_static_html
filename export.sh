@@ -26,9 +26,9 @@ parse_url () {
         curl -o $OUTPUT_FILE $SOURCE
 
         # include html content
-        sed -i -e 's/<head>/cat templates/header.html/e' $OUTPUT_FILE
-        sed -i -e 's/<body>/cat templates/body.html/e' $OUTPUT_FILE
-        sed -i -e 's/<\/body>/cat templates/footer.html/e' $OUTPUT_FILE
+        sed -i -e 's/<head>/cat templates\/header.html/e' $OUTPUT_FILE
+        sed -i -e 's/<body>/cat templates\/body.html/e' $OUTPUT_FILE
+        sed -i -e 's/<\/body>/cat templates\/footer.html/e' $OUTPUT_FILE
 
         # fetch internal links list
         INTERNAL_LINKS=( $(cat $OUTPUT_FILE | grep -Pio "\[\[.*?\]\]")  )
